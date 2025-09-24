@@ -23,6 +23,11 @@ jobs:
             dist/snake.svg
             dist/snake-dark.svg?palette=github-dark
 
+      - name: Clean dist folder
+      run: |
+      rm -rf dist
+      mkdir dist
+
       - name: Push Snake to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
